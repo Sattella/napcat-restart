@@ -1,0 +1,6 @@
+name: astrbot_plugin_napcat_restart
+display_name: Napcat 重启
+desc: 发送 "napcat restart" 命令运行服务器上的 restart.sh，重启并重新登录 Napcat 容器
+help: "@bot 或私聊发送「napcat restart」即可（需要管理员权限）"
+version: v1.0.0
+author: local
