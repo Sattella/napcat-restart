@@ -51,6 +51,7 @@ class NapcatRestartPlugin(Star):
             logger.info(f"[napcat_restart] 脚本输出:\n{output}")
 
             if proc.returncode == 0:
+                await asyncio.sleep(10)  # 等待 AstrBot 与 Napcat 的 WebSocket 重新连接
                 yield event.plain_result(f"✅ Napcat 重启完成！\n{output[-300:] if len(output) > 300 else output}")
             else:
                 yield event.plain_result(f"❌ 脚本执行失败（退出码 {proc.returncode}）\n{output[-300:] if len(output) > 300 else output}")
